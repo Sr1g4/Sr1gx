@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
    "scripts": {
-    "prepare": "if [ \"$VERCEL\" != \"1\" ]; then husky install; fi",
+    "prepare": "if [ \"$CI\" != \"true\" ]; then husky install; fi",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext .js,.jsx",
